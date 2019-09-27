@@ -17,8 +17,13 @@
 // progressDays([9, 9]) --> 0
 
 progressDays = (runs) => {
-  // write your code HERE
-  
+  let numOfProgressDays = 0;
+  if (runs.length) {
+    for (let i=0; i<runs.length; i++) {
+      if (runs[i+1] > runs[i]) numOfProgressDays++
+    }
+  }
+  return numOfProgressDays;
 };
 
 module.exports = progressDays;
